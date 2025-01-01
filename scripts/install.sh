@@ -25,9 +25,7 @@ if [ -n "${INSTALL_PATH}" ] && ! [ -e "${INSTALL_PATH}" ]; then
 fi
 
 # User/arch may have a custom install script
-for file in "${HOME}/bin/${INSTALLKERNEL}"		\
-	    "/sbin/${INSTALLKERNEL}"			\
-	    "${srctree}/arch/${SRCARCH}/install.sh"	\
+for file in "${srctree}/arch/${SRCARCH}/install.sh"	\
 	    "${srctree}/arch/${SRCARCH}/boot/install.sh"
 do
 	if [ ! -x "${file}" ]; then
